@@ -1,0 +1,170 @@
+/* 🔹 Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Full-Screen Layout */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF); /* Same as Registration */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 🔹 Left Section: Login Form */
+.left {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 50px;
+    max-width: 500px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    margin-left: 200px;
+}
+
+.left:hover {
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.left h2 {
+    font-size: 36px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 🔹 Form Inputs */
+.left form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.left input {
+    padding: 14px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.left input:focus {
+    outline: none;
+    border-color: #4CA1AF;
+    box-shadow: 0px 0px 8px rgba(76, 161, 175, 0.6);
+}
+
+/* 🔹 Button */
+.left button {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    font-size: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.left button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* 🔹 Google Login */
+.google-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.google-login p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* 🔹 Error Message */
+.error {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Right Section: Welcome Message */
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 60px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.right h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.right p {
+    font-size: 20px;
+    opacity: 0.9;
+    max-width: 450px;
+}
+
+/* 🔹 Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔹 Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left, .right {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+    }
+
+    .right h2 {
+        font-size: 40px;
+    }
+
+    .right p {
+        font-size: 18px;
+    }
+
+    .left {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}

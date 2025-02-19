@@ -1,0 +1,293 @@
+/* 🌟 General Styling */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+    --text-dark: #333;
+    --text-light: #555;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+}
+
+/* 📌 Admin Panel */
+.admin-panel {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Title */
+.admin-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 📌 User Info */
+.admin-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-color);
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+}
+
+.logout-btn {
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+/* ✅ Success Message */
+.success-message {
+    color: var(--success-color);
+    font-weight: bold;
+    text-align: center;
+    background: #d4edda;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+}
+
+/* 📌 Total Hotel Count */
+.hotel-count {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 📌 Form Section */
+.hotel-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.hotel-input, .hotel-file {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+/* 📌 Hotel Table */
+.hotel-list-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.hotel-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.hotel-list-table th,
+.hotel-list-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.hotel-list-table th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.hotel-list-table td img {
+    width: 70px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* 📌 Buttons */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    padding: 7px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background: var(--success-color);
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #218838;
+}
+
+.delete-btn {
+    background: var(--danger-color);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* 📌 Pagination */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.pagination-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+/* 🌎 Responsive Styles */
+@media (max-width: 1024px) {
+    .admin-title {
+        font-size: 28px;
+    }
+
+    .hotel-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hotel-input {
+        width: 100%;
+    }
+
+    .hotel-list-table th,
+    .hotel-list-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .admin-user {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .hotel-count {
+        text-align: center;
+    }
+
+    .pagination-controls {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hotel-list-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-title {
+        font-size: 22px;
+    }
+
+    .hotel-form {
+        padding: 10px;
+    }
+
+    .hotel-input {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .edit-btn, .delete-btn {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .hotel-list-table th,
+    .hotel-list-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

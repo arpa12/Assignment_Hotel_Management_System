@@ -1,0 +1,150 @@
+/* 🔹 Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #f4f7f8;
+}
+
+/* 🔹 Dashboard Title */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 🔹 User Info & Logout */
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.user-info p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
+
+/* 🔹 Available Hotels Title */
+h3 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Hotel List Grid */
+.hotel-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive Grid */
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+}
+
+/* 🔹 Hotel Card */
+.hotel-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Hotel Image */
+.hotel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Hotel Name */
+.hotel-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-top: 10px;
+}
+
+/* 🔹 Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    background: #3498db;
+    color: white;
+}
+
+.pagination button:hover {
+    background: #2980b9;
+}
+
+.pagination button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+    .hotel-list {
+        grid-template-columns: 1fr;
+    }
+
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logout-btn {
+        margin-top: 10px;
+    }
+}

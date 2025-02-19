@@ -1,0 +1,61 @@
+**Hotel Management System: Approach, Challenges, and Solutions**
+
+### **Approach**
+The Hotel Management System is built using Laravel 11 for the backend and React for the frontend, ensuring a scalable and maintainable application. The project focuses on user authentication, hotel management, and enhanced user experience.
+
+#### **User Authentication**
+- Implemented secure authentication using Laravel Sanctum with Access and Refresh Tokens.
+- Integrated social login via Google using Laravel Socialite for a seamless sign-in experience.
+
+#### **Parallel and Intercepting Routing**
+- Designed login and registration forms as modals for better UX.
+- Ensured that on page reload, these forms are accessible as standalone pages.
+
+#### **Server-Side Rendering for Manage Hotels Page**
+- Used server-side rendering to fetch and display hotel data efficiently.
+- Improved SEO and performance by reducing client-side rendering delays.
+
+#### **Pagination for Manage Hotels Page**
+- Displayed 8 property cards per page for optimal readability.
+- Implemented pagination for smooth navigation across multiple properties.
+
+#### **Property Management**
+- Each property card includes name, address, cost per night, available rooms, image, and rating.
+- Users can navigate to detailed property pages for more information.
+- Social media sharing buttons allow easy property promotion.
+
+#### **CRUD Operations**
+- Users can create, edit, and delete hotel properties.
+- A confirmation alert ensures safe deletion.
+
+#### **Error Handling**
+- Custom 404 pages handle missing routes.
+- Graceful error handling for unexpected server issues ensures a smooth experience.
+
+---
+### **Challenges and Solutions**
+
+#### **1. Authentication and Token Management**
+**Challenge:** Handling secure authentication with token-based authorization.
+**Solution:** Used Laravel Sanctum for Access and Refresh Token management, ensuring secure session handling.
+
+#### **2. Social Login Integration**
+**Challenge:** Implementing OAuth login with Google required additional setup.
+**Solution:** Configured Laravel Socialite, ensured correct API credentials, and managed user data storage upon authentication.
+
+#### **3. Server-Side Rendering for Manage Hotels Page**
+**Challenge:** Fetching hotel data efficiently while ensuring good performance and SEO.
+**Solution:** Implemented Laravel API endpoints with server-side fetching in React, reducing client-side load time.
+
+#### **4. Pagination Implementation**
+**Challenge:** Managing large datasets without performance degradation.
+**Solution:** Used Laravel’s built-in pagination with React’s frontend pagination controls to enhance efficiency.
+
+#### **5. Error Handling and User Feedback**
+**Challenge:** Providing meaningful error messages and handling server downtime.
+**Solution:** Implemented custom error pages for 404 and 500 errors, ensuring a user-friendly experience.
+
+---
+### **Conclusion**
+By leveraging Laravel 11 and React, this Hotel Management System successfully delivers a feature-rich and user-friendly platform. The integration of authentication, pagination, and CRUD operations ensures smooth hotel management. Overcoming challenges with structured problem-solving and efficient implementation helped create a scalable and maintainable system.
+
