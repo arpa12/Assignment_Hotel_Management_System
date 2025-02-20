@@ -117,7 +117,7 @@ This project is a Hotel Management System built with **Laravel 11** as the backe
 7. Install Sanctum for API authentication:
 
     ```bash
-    php artisan sanctum:install
+    php artisan install:api
     ```
 
 8. Start the Laravel development server:
